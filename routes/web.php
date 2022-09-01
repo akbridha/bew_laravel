@@ -17,7 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('nickname', function () {
-    return view('akbar');
+    return view('akbar',[
+        "nickorigin"=>"rida",
+        "nickboarding"=>"ridaw",
+        "img"=>"futu.jpg"
+    ]);
 });
 Route::get('3', function () {
     return "ini halaman Tiga";

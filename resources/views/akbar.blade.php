@@ -10,9 +10,9 @@
 <body>
     <h2>Here i introduce my self akbar</h2>
     <h3>Yes that true. its was my last name</h3>
-    <h5>But actually i called rida or ridaw</h5>
+    <h5>But actually i called <?php echo $nickorigin; ?> or <?php echo $nickboarding; ?></h5>
     <h4>so when u try to verify me to my old frien, they wouldn't recognize</h4>
-    <img src="img/futu.jpg" alt="foto sus" width="400">
+    <img src="img/<?php echo $img; ?>" alt="foto sus" width="400">
 <script src="js/alert_akbar.js"> </script>
 </body>
 </html>
