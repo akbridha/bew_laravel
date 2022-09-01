@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('nickname', function () {
+    return view('akbar');
+});
+Route::get('3', function () {
+    return "ini halaman Tiga";
+});
