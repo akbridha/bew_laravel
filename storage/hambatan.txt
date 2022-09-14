@@ -1,0 +1,33 @@
+video Tutorial ke 6 database migration & eloquent.  WPU laravel playlist.
+objective: Memasukkan beberapa data pada database lokal melalui tinker commandline
+expected :pada video tutorial, bisa menambahkan beberapa data melalui tinker
+Kendala: ketika mencoba, ternyata setiap menambah beberapa data sekaligus. hanya 
+         data yang terakhir yang tersimpan pada database. dan yang sebelumnya 
+         tidak tersimpan
+
+Titik terang:  Setiap kali memasukkan data perbaris pada tinker, harus  membuat
+                objek baru. misalnya model siaran { $siar = new app/Models/Siaran" }
+
+
+===========================================================================
+video Tutorial ke 7. model post
+objective: membuat database lewat file migrate di laravel ke
+          dalam db lokal dan mengambil datanya via FileModel.php
+expected : pada video tutorial, controller bisa mengambil data 
+         melalui fileModel.php walaupun pada fileModel.php tidak ada
+         query bahkan kelas untuk mengambil semua data(all()) pun tidak
+         ada, namun tetap bisa mengambil data karena sudah dihandle 
+         oleh laravel. 
+Kendala: ketika dijalankan [Class "App\Http\Controllers\Siaran" not found]
+         tidak ditemukan classnya.. memang class nya tidak ada pada 
+         Siaran.php(file model). tetapi seharusnya tetap bisa.
+
+Titik terang:  Ternyata model Siatan.php belum diimport pada file Controller;
+=============================================================================
+Video Tutorial Ke 7. Model post
+objective: menambah data melalui tinker
+expected : setelah mengisi data lalu di save() maka return true
+kendala  : ketika di save() muncul error.
+Titk terang: ternyata FileModel.php yang diimputkan datanya belum Meng extend class Model
+=============================================================================
+
