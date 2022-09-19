@@ -8,7 +8,7 @@
         <ul class="navbar-nav">
 
           <li class="nav-item">
-            <a class="nav-link {{($title === 'tahun') ? 'active' : ""  }}" href="tahun">Y-Feature</a>
+            <a class="nav-link {{($title === 'tahun') ? 'active' : ""  }}" href="/tahun">Y-Feature</a>
           </li>
           <li class="nav-item">
             <a class="nav-link {{($title === 'about') ? 'active' : ""  }}" href="/about">About</a>

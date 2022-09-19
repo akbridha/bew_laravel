@@ -1,7 +1,9 @@
 <?php
 
 
-use App\Models\postModel;
+
+use App\Models\postModel; 
+use App\Models\Kategori; 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Database\Eloquent\Model;
 use App\Http\Controllers\postController;
@@ -29,4 +31,12 @@ Route::get('single_post/{siaran:slug}',[postController::class,'singlePost']
 // }
 );
 Route::get('tes', [postController::class,'tes']);
-Route::get('welcome', [postController::class, 'welcome']);
+Route::get('welcome', [postController::class, 'welcome']); 
+
+Route::get('Kategori/{kategori:slug}', function (Kategori $kategori){
+    return view('layouts.kategori', [
+        'title' => $kategori->name,
+        'siaran' => $kategori->siaran,
+        'kategori' => $kategori->name
+    ]);
+}); 
