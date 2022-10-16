@@ -1,7 +1,8 @@
 @extends('layouts.beranda')
 
 @section('container')
-<h3>Single</h3>
+<!-- <h6>{{var_dump($siaran)}}</h6> -->
+<h3>Single post detail</h3>
 <article>
 
   <h5> Kategori : <a href = "/Kategori/{{$siaran->kategori->slug}}" class='text-decoration-none'>{{$siaran->kategori->name}}</a></h5>
@@ -10,4 +11,6 @@
 
     {!! $siaran->body !!}
   </article>   
+
+
 @endsection

@@ -10,9 +10,13 @@ class Siaran extends Model
     use HasFactory;
 
 
-    // protected $fillable = ['title', 'excerpt', 'body'];
+    protected $fillable = ['title', 'excerpt', 'body'];
     protected $guarded = ['id'];
-    public function Kategori(){
+
+    public function kategori(){
         return $this->belongsTo(Kategori::class);
+    }
+    public function author(){
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

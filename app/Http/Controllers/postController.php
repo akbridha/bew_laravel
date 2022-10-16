@@ -29,9 +29,10 @@ class postController extends Controller
     
 
         return view('layouts.tahun',[
-            "title"=>"tahun"
+            "title"=>"Semua siaran pertahun"
             ,
-            "siaran"=>Siaran::all()
+            // "siaran"=>Siaran::all()
+            "siaran"=>Siaran::latest()->get()
         ]);
     }
 
@@ -39,9 +40,9 @@ class postController extends Controller
 
     public function singlePost(Siaran $siaran){
         return view('post',[
-            "title"=>"Post detail"
-            // ,"post"=>Siaran::find($id)
-            ,"siaran"=>$siaran
+            "title"=>"Post detail",
+            // "post"=>Siaran::find($id)
+            "siaran"=>$siaran
             ])
             ;
     }
@@ -69,4 +70,13 @@ class postController extends Controller
             "title"=>"tesPage"
         ]);
     }
+
+// salah tempat
+    // function viewByKategori(Kategori $kategori){
+    //     return view('layouts.tahun', [
+    //         'title' => $kategori->name,
+    //         'siaran' => $kategori->siaran,
+    //         'kategori' => $kategori->name
+    //     ]);
+    // }
 }

@@ -4,6 +4,7 @@
 
 use App\Models\postModel; 
 use App\Models\Kategori; 
+use App\Models\User; 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Database\Eloquent\Model;
 use App\Http\Controllers\postController;
@@ -38,5 +39,15 @@ Route::get('Kategori/{kategori:slug}', function (Kategori $kategori){
         'title' => $kategori->name,
         'siaran' => $kategori->siaran,
         'kategori' => $kategori->name
+    ]);
+});
+
+
+Route::get('/authors/{user}', function (User $user){
+    return view('layouts.tahun', [
+
+        'title' => "Siaran per USer",
+        'siaran' => $user->siaran
+
     ]);
 }); 

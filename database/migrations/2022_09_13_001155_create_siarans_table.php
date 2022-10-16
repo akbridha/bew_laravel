@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('siarans', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
             $table->foreignId('kategori_id');
+            $table->foreignId('user_id');
+            $table->string('title');
             $table->string('slug')->unique();
             $table->text('excerpt');
             $table->text('body');
