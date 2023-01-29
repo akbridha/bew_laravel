@@ -16,7 +16,7 @@ class Siaran extends Model
     public function kategori(){
         return $this->belongsTo(Kategori::class);
     }
-    public function author(){
+    public function user(){
         return $this->belongsTo(User::class, 'user_id');
     }
 }

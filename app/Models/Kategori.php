@@ -12,8 +12,7 @@ class Kategori extends Model
     protected $guarded = ['id'];
 
     public function siaran(){
-        return $this->hasMany(Siaran::class)
-        ;
+        return $this->hasMany(Siaran::class);
     }
 
 }

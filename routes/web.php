@@ -37,17 +37,16 @@ Route::get('welcome', [postController::class, 'welcome']);
 Route::get('Kategori/{kategori:slug}', function (Kategori $kategori){
     return view('layouts.kategori', [
         'title' => $kategori->name,
-        'siaran' => $kategori->siaran,
-        'kategori' => $kategori->name
+        'siaran' => $kategori->siaran->load('user', 'kategori')
     ]);
 });
 
 
 Route::get('/authors/{user}', function (User $user){
-    return view('layouts.tahun', [
+    return view('layouts.perUser', [
 
-        'title' => "Siaran per USer",
-        'siaran' => $user->siaran
+        'title' => "Siaran per User : ".$user->name,
+        'siaran' => $user->siaran->load('kategori', 'user'),
 
     ]);
 }); 
