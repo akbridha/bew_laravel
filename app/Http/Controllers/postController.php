@@ -32,7 +32,7 @@ class postController extends Controller
             "title"=>"Semua siaran pertahun"
             ,
             // "siaran"=>Siaran::all()
-            "siaran"=>Siaran::latest()->get()
+            "siaran"=>Siaran::with(['user', 'kategori'])->latest()->get()
         ]);
     }
 
@@ -55,15 +55,11 @@ class postController extends Controller
         ]);
     }
 
-
-
-
     public function welcome() {
         return view('layouts.welcome',[
             "title"=>"welcome"
         ]);
     }
-
 
     public function tes(){
         return view('layouts.beranda',[
