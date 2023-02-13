@@ -48,6 +48,10 @@ class DatabaseSeeder extends Seeder
             'name' => 'Advance',
             'slug' => 'advance'
         ]);
+        Kategori::create([
+            'name' => 'Aviation',
+            'slug' => 'aviation'
+        ]);
         // Siaran::create([
         //         'title' => 'Pentingnya Pengarahan Pada Pelajar Pasca Sekolah',
         //         'slug' => 'pentingnya-pengarahan-pada-pelajar-pasca-sekolah',

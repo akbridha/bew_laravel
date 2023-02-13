@@ -50,3 +50,11 @@ Route::get('/authors/{user}', function (User $user){
 
     ]);
 }); 
+
+Route::get('/kategori', function (Kategori $kategori){
+    return view('layouts.semuaKategori', [
+
+        'title' => "semua Kategori",
+        'kategori' => Kategori::all()
+    ]);
+}); 
